@@ -11,7 +11,7 @@ if plt == 'Windows': pathlib.PosixPath = pathlib.WindowsPath
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 #device = torch.device('cuda')
 print(device)
-model = torch.hub.load('yolov5', 'custom', 'last.pt', source='local').to(device)
+model = torch.hub.load('ultralytics/yolov5', 'custom', 'last.pt').to(device)
 
 cap = cv2.VideoCapture("Test_UAV_video.mp4")
 cap.set(3, 1280)
